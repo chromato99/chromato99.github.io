@@ -18,21 +18,21 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: BGKim                          # the main title
+title: chromato99                          # the main title
 
-tagline: BGKim(chromato99)'s personal homepage   # it will display as the sub-title
+tagline: Personal Homepage   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  BeomgiKim : A student who studies computer science.
+  chromato99(BGKim)'s personal homepage
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://chromato99.github.io'
 
 github:
   username: chromato99             # change to your github username
 
 # twitter:
-#   username: twitter_username            # change to your twitter username
+#   username:            # change to your twitter username
 
 social:
   # Change to your full name.
@@ -41,10 +41,10 @@ social:
   email: chromato99@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/username      # change to your twitter homepage
+    # - https://twitter.com/       # change to your twitter homepage
     - https://github.com/chromato99       # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://www.facebook.com/bg.kim.948
     # - https://www.linkedin.com/in/username
 
 google_site_verification: google_meta_tag_verification # change to your verification string
@@ -77,23 +77,23 @@ theme_mode: dark  # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: 'https://avatars.githubusercontent.com'
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: '/u/20539422?v=4'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
 
 comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: utterances        # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
+    repo: chromato99/chromato99.github.io        # <gh-username>/<repo>
+    issue_term: pathname  # < url | pathname | title | ...>
 
 paginate: 10
 
