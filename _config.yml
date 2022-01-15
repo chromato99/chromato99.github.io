@@ -20,7 +20,7 @@ timezone: Asia/Seoul
 
 title: chromato99                          # the main title
 
-tagline: 'Beomgi Kim<br>Dept. of Software, Gachon Univ.'   # it will display as the sub-title
+tagline: 'Beomgi Kim[김범기]<br>Dept. of Software, Gachon Univ.'   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   chromato99(BGKim)'s personal homepage
