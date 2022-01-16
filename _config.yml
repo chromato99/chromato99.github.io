@@ -41,6 +41,7 @@ social:
   email: chromato99@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://chromato99.com/about/
     # - https://twitter.com/       # change to your twitter homepage
     - https://github.com/chromato99       # change to your github homepage
     # Uncomment below to add more social links
