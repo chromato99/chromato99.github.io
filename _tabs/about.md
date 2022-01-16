@@ -10,10 +10,10 @@ order: 4
 ![Profile-Image](bgkim.jpg){: w="300" h="300" .normal}
 
 **Name**: Beomgi Kim &#124; 김범기<br>
-**Major**: Dept. of Software, Gachon Univ. (가천대학교, 소프트웨어학과)<br>
+**Major**: Dept. of Software, Gachon Univ. &#124; 가천대학교, 소프트웨어학과<br>
 **Email**: chromato99@gmail.com<br>
-**Github**: https://github.com/chromato99<br>
-**Homepage(Blog)**: https://chromato99.com
+**Github**: [https://github.com/chromato99](https://github.com/chromato99)<br>
+**Homepage(Blog)**: [https://chromato99.com](https://chromato99.com)
 
 ## Description
 
