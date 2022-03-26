@@ -510,10 +510,38 @@ mkinitcpio -P
 
 ### 마운트 해제 및 재부팅
 
-## 설치 후 설정
+이제야 기본적인(?) 아치 리눅스 운영체제 설치가 끝났다.
 
-이 이상의 설정은 이미 위에서 설정한것도 몇가지 있지만 아치위키의 [General recommendations](https://wiki.archlinux.org/title/General_recommendations) 문서를 참고하면 좋다.
+아래 명령으로 시스템 환경에서 나갈수 있다.
+
+```shell
+exit
+```
+
+다음으로 마운트 했던 저장장치들을 모두 해제한다.
+
+```shell
+umount -lR /mnt
+```
+
+이제 설치 미디어가 아닌 설치된 아치 리눅스로 재부팅 할 수 있다!
+
+```shell
+reboot
+```
+
+이제 아치 리눅스 설치용 USB 드라이브는 분리해도 된다.
+
+아치 리눅스에 오신걸 환영합니다!!!
+
+## 추가 권장 패키지 설치
+
+열심히 설치한 아치 리눅스로 부팅하였지만 아직 GUI도 없도 인터넷 브라우저와 같은 필수적인 응용프로그램이 설치되어있지 않다.
+
+따라서 아주 기본적인 몇가지만 설치하는 방법을 설명하고자 한다.
 
 ## 추가로 참고할 자료
+
+이 이상의 설정은 이미 위에서 설정한것도 몇가지 있지만 아치위키의 [General recommendations](https://wiki.archlinux.org/title/General_recommendations) 문서를 참고하면 좋다.
 
 (아직 작성중....)
