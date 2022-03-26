@@ -39,7 +39,7 @@ tags: [linux, arch linux, installation]
 
 딱히 상관은 없지만 파티션 형식은 기본값인 MBR이 아닌 GPT(좀더 최신이다)로 선택해도 된다. 다만 GPT로 선택하면 UEFI 환경에서만 부팅 가능하다.
 
-[rufus_img](rufus_img.png)
+![rufus_img](/rufus_img.png)
 
 ### 설치용 미디어 만들기 (Linux)
 
@@ -507,6 +507,8 @@ mkinitcpio -P
 위의 부팅전에 secure boot 설정을 껐지만 앞으로 다시 켜서 사용하고 싶을 경우 secure boot 설정을 해주어야 한다.
 
 [shim](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#shim) 문서를 참고하면 된다.
+
+### 마운트 해제 및 재부팅
 
 ## 설치 후 설정
 
