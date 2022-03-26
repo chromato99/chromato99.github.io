@@ -168,13 +168,13 @@ timedatectl set-ntp true
 ```shell
 timedatectl status
 ```
-### system encryption 설정 (optional)
+### System encryption 설정 (optional)
 
 시스템 전체를 암호화 하여 아치 리눅스를 설치하고자 하면 현재 단계에서 설정하면 된다.
 
 암호화에 대한 설명은 아치위키 [dm-crypt](https://wiki.archlinux.org/title/Dm-crypt) 문서를 참고하면 된다.
 
-### partition 설정
+### Partition 설정
 
 이제 파티션을 설정해 줘야 한다.
 
@@ -229,7 +229,7 @@ w로 파티션 설정 저장
 q로 fdisk명령 종료
 ```
 
-### partition 포맷
+### Partition 포맷
 
 이제 파티션 설정을 모두 끝냈으니 파티션 들을 포맷해줘야 한다.
 
@@ -254,7 +254,7 @@ mkfs.ext4 /dev/root_partition -L arch_os
 > -L은 파티션 라벨을 추가하는 옵션이다.
 {: .prompt-info }
 
-### mount 파일 시스템
+### Mount 파일 시스템
 
 이제 파티션 설정이 끝났다!!
 
@@ -282,7 +282,7 @@ mount /dev/efi_system_partition /mnt/boot
 swapon /dev/swap_partition
 ```
 
-### mirrorlist 설정
+### Mirrorlist 설정
 
 아치 리눅스를 패키지를 여러 [미러서버](https://wiki.archlinux.org/title/Mirrors)들을 통해 다운받을 수 있다. 설치용 미디어 환경에서는 인터넷 연결이 확이되는 순간 20여개의 미러서버들을 속도순으로 정렬해준다.
 
@@ -295,7 +295,7 @@ swapon /dev/swap_partition
 > 서버 리스트에는 Server 앞에 # 주석이 적혀있는데 주석은 지워줘야 한다!
 {: .prompt-info }
 
-### base 패키지 및 kernel 설치
+### Base 패키지 및 kernel 설치
 
 드디어 가장 메인인 아치 리눅스 커널과 기본 패키지를 설치할 차례이다!!
 
@@ -319,7 +319,7 @@ pacstrap /mnt base linux-zen linux-zen-headers linux-firmware base-devel vim net
 
 이 이상의 패키지는 chroot 이후에 설치할 예정이다.
 
-### fstab
+### Fstab
 
 다음으로 fstab 파일을 생성해야 한다. 아래 명령을 실행해준다.
 
@@ -327,7 +327,7 @@ pacstrap /mnt base linux-zen linux-zen-headers linux-firmware base-devel vim net
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
-### chroot
+### Chroot
 
 이제 설치한 시스템으로 진입할 수 있다!!
 이래 명령어를 입력한다.
@@ -336,7 +336,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
-### time zone
+### Time zone
 
 새로 설치한 시스템을 위한 설정을 몇가지 해줘야 한다. 
 
@@ -354,7 +354,7 @@ hwclock --systohc
 
 좀더 추가적인 정보는 [timezone](https://wiki.archlinux.org/title/System_time#Time_zone) 문서와 [이전 포스트](https://chromato99.com/posts/%EB%93%80%EC%96%BC%EB%B6%80%ED%8C%85-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-%EC%8B%9C%EA%B0%84%EC%9D%B4-%EC%9D%B4%EC%83%81%ED%95%98%EA%B2%8C-%EB%82%98%EC%98%A4%EB%8A%94-%EB%AC%B8%EC%A0%9C/) 참고하자.
 
-### localizaion
+### Localizaion
 
 다음으로 언어 설정을 해주어야 하는데 `/etc/locale.gen` 파일에서 사용할 언어들의 주석을 제거해주면 된다.
 
@@ -375,7 +375,7 @@ LANG=en_US.UTF-8
 > 글쓴이의 경우 리눅스 시스템 기본 언어를 한국어로 설정하면 충돌 등의 문제가 우려되 영어로 설정하였다.
 {: .prompt-info }
 
-### network configuration
+### Network 설정
 
 네트워크 설정 또한 해주어야 하는데 `/etc/hostname` 파일을 생성해 원하는 호스트네임을 적어주면 된다.
 
@@ -414,7 +414,7 @@ useradd -m -g users -G wheel -s /bin/bash username
 passwd user
 ```
 
-### sudo 설정
+### Sudo 설정
 
 기본 설정으로는 [sudo](https://wiki.archlinux.org/title/Sudo) 명령을 사용할 수 없으므로 sudo 사용을 설정해주어야 한다.
 
@@ -431,7 +431,7 @@ sudo 설정파일에서 아래로 내리다 보면 `## Uncomment to allow member
 %wheel ALL=(ALL) ALL
 ```
 
-### microcode (optional)
+### Microcode (optional)
 
 CPU 제조사들은 CPU의 보안 이슈가 발생하면 이에대한 소프트웨어 패치를 [microcode](https://wiki.archlinux.org/title/Microcode)라는 이름으로 배포한다.
 
@@ -444,7 +444,7 @@ pacman -S intel-ucode # Intel CPU인 경우
 
 이러한 패키지의 로딩은 부트로더에서 설정하므로 아래 부트로더 항목에서 설명했다.
 
-### boot loader 설정
+### Boot loader 설정
 
 아직 부팅을 위한 부트로더를 설정하지 않았다. systemd에 기본으로 포함되어 있는 [systemd-boot](https://wiki.archlinux.org/title/Systemd-boot)로 부트로더를 설정할 수 있다.
 
@@ -492,7 +492,7 @@ options root="LABEL=arch_os" rw
 > 만약 듀얼부팅 환경이라면 윈도우 부팅 매니저는 수동으로 추가하지 않아도 자동으로 추가해 준다!
 {: .prompt-info }
 
-### initramfs (optional)
+### Initramfs (optional)
 
 보통의 경우에는 `mkinitcpio`명령이 커널을 설치할 때 자동으로 실행되기 때문에 필요없지만 LVM, system encryption, RAID 등의 설정을 할때는 `mkinitcpio.conf`파일을 수정하기 때문에 새로 initramfs를 생성해줘야 한다.
 
@@ -502,7 +502,7 @@ initramfs 생성은 아래 명령을 실행하면 된다.
 mkinitcpio -P
 ```
 
-### secure boot 설정 (optional)
+### Secure boot 설정 (optional)
 
 위의 부팅전에 secure boot 설정을 껐지만 앞으로 다시 켜서 사용하고 싶을 경우 secure boot 설정을 해주어야 한다.
 
