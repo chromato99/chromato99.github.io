@@ -9,6 +9,8 @@ categories: [Linux, Installation and Configuration]
 tags: [linux, arch linux, installation]
 ---
 
+![arch_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/2880px-Arch_Linux_logo.svg.png)
+
 아치 리눅스는 리눅스 배포판 가운데 하나로 미니멀리즘과 빠른 업데이트로 유명하다.
 
 평소 리눅스를 공부하고자 리눅스를 메인 운영체제로 사용하기 위해 노력하는데, 최근 아치 리눅스에 정착해 사용중이다.
