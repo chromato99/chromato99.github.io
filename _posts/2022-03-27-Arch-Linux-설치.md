@@ -55,7 +55,7 @@ tags: [linux, arch linux, installation]
 lsblk
 ```
 
-그리고 해당 USB를 부팅용 USB로 만들기 위해서는 내용을 모두 지워줘야 하는 관계로 아래 명령을 입력한다.
+그리고 해당 USB를 부팅용 USB로 만들기 위해서는 내용을 모두 지워줘야 하는 관계로 [wipefs](https://wiki.archlinux.org/title/Device_file#wipefs) 명령을 입력한다.
 
 > 디바이스 경로 (/dev/sdx)에서 x는 자신의 디바이스 경로로 입력해 주면 된다. 
 {: .prompt-info }
@@ -84,7 +84,7 @@ sudo sh -c 'cat ./archlinux-2022.03.01-x86_64.iso > /dev/sdx'
 
 만약 cat 명령이 아닌 cp나 dd를 사용하고 싶다면 [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium) 문서를 참고하자.
 
-USB 드라이브가 제대로 완성됬는지 확인하고 싶다면 아래 명령어로 확인해볼 수 있다.
+USB 드라이브가 제대로 완성됬는지 확인하고 싶다면 [fdisk](https://wiki.archlinux.org/title/Fdisk) 명령어로 확인해볼 수 있다.
 
 ```shell
 fdisk -l
@@ -168,6 +168,9 @@ timedatectl set-ntp true
 ```shell
 timedatectl status
 ```
+
+리눅스 시스템 시간에 관련된 좀더 자세한 정보는 [system time](https://wiki.archlinux.org/title/System_time) 문서에서 확인할 수 있다.
+
 ### System encryption 설정 (optional)
 
 시스템 전체를 암호화 하여 아치 리눅스를 설치하고자 하면 현재 단계에서 설정하면 된다.
@@ -192,7 +195,7 @@ timedatectl status
 | [SWAP]               | /dev/swap_partition       | Linux swap            | More than 512 MiB       |
 | /mnt                 | /dev/root_partition       | Linux x86-64 root (/) | Remainder of the device |
 
-아래 명령을 통해 fdisk 명령으로 파티션을 설정 할 수 있다.
+아래 명령을 통해 [fdisk](https://wiki.archlinux.org/title/Fdisk) 명령으로 파티션을 설정 할 수 있다.
 
 ```shell
 # 현재 인식되는 저장장치 및 파티션 표시
@@ -232,6 +235,7 @@ q로 fdisk명령 종료
 ### Partition 포맷
 
 이제 파티션 설정을 모두 끝냈으니 파티션 들을 포맷해줘야 한다.
+리눅스에서는 [mkfs](https://wiki.archlinux.org/title/File_systems#Create_a_file_system) 명령으로 파티션을 원하는 타입으로 포맷할 수 있다.
 
 우선 아래 명령으로 EFI 시스템 파티션을 포맷할 수 있다.
 
@@ -299,7 +303,7 @@ swapon /dev/swap_partition
 
 드디어 가장 메인인 아치 리눅스 커널과 기본 패키지를 설치할 차례이다!!
 
-아래 명령어를 통해 매우 기본적인 아치 리눅스 커널과 기본 패키지를 설치 할 수 있다.
+[pacstrap](https://man.archlinux.org/man/pacstrap.8) 명령어를 통해 매우 기본적인 아치 리눅스 커널과 기본 패키지를 설치 할 수 있다.
 
 ```shell
 pacstrap /mnt base linux linux-firmware
@@ -321,7 +325,9 @@ pacstrap /mnt base linux-zen linux-zen-headers linux-firmware base-devel vim net
 
 ### Fstab
 
-다음으로 fstab 파일을 생성해야 한다. 아래 명령을 실행해준다.
+다음으로 fstab 파일을 생성해야 한다. [fstab](https://wiki.archlinux.org/title/Fstab) 이란 파일 시스템 테이블로 리눅스의 파일 시스템에 대한 정보를 저장하는 파일이다.
+
+아래 명령으로 현재 마운트된 파일 시스템을 기반으로 테이블을 생성할 수 있다.
 
 ```shell
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -383,7 +389,7 @@ LANG=en_US.UTF-8
 myhostname
 ```
 
-또한 위의 pacstrap 명령으로 설치한 network manager가 자동 실행되도록 아래 명령을 입력한다.
+또한 위의 pacstrap 명령으로 설치한 [NetworkManager](https://wiki.archlinux.org/title/NetworkManager)가 자동 실행되도록 아래 명령을 입력한다.
 
 ```shell
 systemctl enable NetworkManager.service
@@ -399,7 +405,7 @@ passwd
 
 ### 사용자 계정 추가
 
-root 계정만을 사용하는 것은 보안상 좋지 않다고 하므로 사용자 계정을 추가해주어야 한다.
+아치위키의 [관련 문서](https://wiki.archlinux.org/title/General_recommendations#Users_and_groups)에 따르면 root 계정만을 사용하는 것은 보안상 좋지 않다고 하므로 사용자 계정을 추가해주어야 한다.
 
 ```shell
 useradd -m -g users -G wheel -s /bin/bash username
@@ -536,7 +542,7 @@ reboot
 
 ## 추가 권장 패키지 설치
 
-열심히 설치한 아치 리눅스로 부팅하였지만 아직 GUI도 없도 인터넷 브라우저와 같은 필수적인 응용프로그램이 설치되어있지 않다.
+열심히 설치한 아치 리눅스로 부팅하였지만 아직 GUI도 없고 인터넷 브라우저와 같은 필수적인 응용프로그램이 설치되어있지 않다.
 
 따라서 아주 기본적인 몇가지만 설치하는 방법을 설명하고자 한다.
 
