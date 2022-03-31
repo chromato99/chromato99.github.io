@@ -6,7 +6,7 @@ author:
 date: 2022-03-27 2:00:00 +0900
 img_path: /assets/img/posts/2022-03-27-Arch-Linux-설치/
 categories: [Linux, Installation and Configuration]
-tags: [linux, arch linux, installation]
+tags: [linux, arch linux, installation, boot, secure boot]
 ---
 
 ![arch_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/2880px-Arch_Linux_logo.svg.png)
@@ -510,12 +510,6 @@ initramfs 생성은 아래 명령을 실행하면 된다.
 mkinitcpio -P
 ```
 
-### Secure boot 설정 (optional)
-
-위의 부팅전에 secure boot 설정을 껐지만 앞으로 다시 켜서 사용하고 싶을 경우 secure boot 설정을 해주어야 한다.
-
-[shim](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#shim) 문서를 참고하면 된다.
-
 ### 마운트 해제 및 재부팅
 
 이제야 기본적인(?) 아치 리눅스 운영체제 설치가 끝났다.
@@ -547,9 +541,186 @@ reboot
 열심히 설치한 아치 리눅스로 부팅하였지만 아직 GUI도 없고 인터넷 브라우저와 같은 필수적인 응용프로그램이 설치되어있지 않다.
 
 따라서 아주 기본적인 몇가지만 설치하는 방법을 설명하고자 한다.
+우선 여러 패키지들을 다운받으려면 인터넷이 필요하니 인터넷 연결을 확인 한다.
+
+```shell
+ping -c 3 archlinux.org
+```
+
+### Wi-Fi 연결 (optional)
+
+유선 네트워크를 사용할 수 없는 환경이라면 Wi-Fi에 연결해야 한다. 위의 설치에서 [Network Manager](https://wiki.archlinux.org/title/NetworkManager)를 설치했으니 아래 명령어로 Wi-Fi에 연결 할 수 있다.
+
+```shell
+nmtui
+```
+
+명령어를 입력하면 터미널 기반의 UI로 편하게 Wi-Fi에 연결 할 수 있다. 방향키로 커서를 이동할 수 있고 `Activate connection`을 선택하면 주변 Wi-Fi를 확인할 수 있고 `Activate`로 연결할 수 있다.
+
+### 패키지 업데이트
+
+우선 다른 패키지를 다운받기 전에 설치된 패키지들을 모두 없데이트 해준다. 아치 리눅스 기본 패키지 매니저인 [pacman](https://wiki.archlinux.org/title/Pacman)에서는 아래 명령어로 업데이트를 할 수 있다.
+
+```shell
+sudo pacman -Syu
+```
+
+### 그래픽 드라이버 설치
+
+현재의 CLI 환경에서도 많은 작업을 할 수는 있겠지만 아무래도 그래픽 환경이 있는게 편하다. 이런 그래픽 환경을 사용하기 위해서는 그래픽 카드를 잘 작동 시킬수 있도록 그래픽 드라이버를 먼저 설치해 주어야 한다.
+
+그래픽 드라이버에 대한 설명은 [Intel Graphics](https://wiki.archlinux.org/title/Intel_graphics), [AMDGPU](https://wiki.archlinux.org/title/AMDGPU), [Nvidia](https://wiki.archlinux.org/title/NVIDIA)에서 확인할 수 있다.
+
+설치 명령을 정리하면 아래와 같다.
+
+```shell
+# Intel
+sudo pacman -S mesa xf86-video-intel vulkan-intel
+
+# AMD
+sudo pacman -S mesa xf86-video-amdgpu vulkan-radeon
+
+# Nvidia
+sudo pacman -S nvidia
+
+# Nvidia with custom kernel
+sudo pacman -S nvidia-dkms
+```
+
+추가로 커널 모드 설정을 해주어야 하는데 `/etc/mkinitcpio.conf`파일을 수정해주어야 한다. 자세한 설명은 [kernel mode setting](https://wiki.archlinux.org/title/Kernel_mode_setting) 문서를 확인하면 된다.
+
+간단하게 정리하면 아래와 같다.
+
+```
+# Intel
+MODULES=(... i915 ...)
+
+# AMD
+MODULES=(... amdgpu ...)
+
+# Nvidia
+MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
+```
+
+Nvidia의 경우 커널 파라미터도 설정해 주어야 하는데 `/boot/loader/entries/arch.conf`파일에서 `options`를 아래와 같이 파라미터를 추가해준다.
+
+```
+options root="LABEL=arch_os" rw nvidia-drm.modeset=1
+```
+
+### 데스크탑 환경 설치
+
+[데스크탑 환경(Desktop Environment)](https://wiki.archlinux.org/title/Desktop_environment)란 리눅스에서 GUI 환경 패키지 세트쯤 된다고 생각하면 된다.
+
+아치위키 문서에서도 확인할 수 있듯이 리눅스에는 매우 다양한 데스크탑 환경이 있는데 유명한것으로는 [GNOME](https://wiki.archlinux.org/title/GNOME), [KDE](https://wiki.archlinux.org/title/KDE), [Xfce](https://wiki.archlinux.org/title/Xfce)가 있다.
+
+여기서는 글쓴이가 개인적으로 좋아하는 한국에서는 그놈이라 쓰는 GNOME을 기준으로 설명한다. 우선 gnome 패키지를 설치해 준다.
+
+```shell
+sudo pacman -S gnome
+```
+
+위 명령어를 입력하면 다양한 GNOEM 소프트웨어들을 선택하라 하는데 그냥 엔터를 누르면 기본값으로 설치된다.
+
+설치를 완료하였다면 재부팅시 자동으로 실행되게 해야하는데 [systemctl](https://wiki.archlinux.org/title/Systemd#Basic_systemctl_usage) 명령을 사용한다.
+
+```shell
+sudo systemctl enable gdm
+```
+
+### 한글 설정
+
+아치 리눅스는 기본적으로 서방에서 많이 사용하다보니 한글 폰트나 한글 입력기가 기본적으로 설치되어 있지 않다. 따라서 몇가지 설정을 해주어야 하는데 자세한건 [Localization/Korean](https://wiki.archlinux.org/title/Localization/Korean) 문서를 확인하면 된다.
+
+아래 설명은 글쓴이의 취향에 기반해 있다.
+
+```shell
+# 폰트 설치
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+
+# 한글 입력기 설치
+sudo pacman -S ibus-hangul
+```
+
+입력기를 설치 후에는 관련 설정또한 해주어야 하는데 `/etc/environment`파일을 아래와 같이 입력해주면 된다.
+
+```
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
+
+### AUR helper 설치
+
+아치 리눅스에는 [AUR(Arch User Repository)](https://wiki.archlinux.org/title/Arch_User_Repository)라는 아치 유저들이 관리하고 있는 유저 레포지토리가 있다. 어디까지나 '유저' 레포지토리인 만큼 악성코드가 있다거나 문제가 있는 패키지가 있던 경우도 있으나 유명하고 활성화된 패키지들 또한 많다.
+
+그리고 악성코드의 경우 'PKGBUILD'를 꼼꼼히 확인하는 등의 약간의 수고를 들이면 충분히 안전하게 사용할 수 있다. 다만 이러한 AUR을 그냥 사용하기엔 약간의 불편함이 있어 이를 도와주는 [AUR helper](https://wiki.archlinux.org/title/AUR_helpers)를 설치하는 방법에 대해 설명하고자 한다.
+
+아래 방법은 AUR 패키지의 메뉴얼 한 설치 방법이기도 하므로 수동 설치가 관심 있으면 참고해도 좋다. 여기서는 가장 유명한 AUR helper인 [yay](https://github.com/Jguer/yay)를 설치한다.
+
+yay는 AUR에 업로드 되어 있으므로 우선 이 패키지 파일을 다운받아야 하므로 [git](https://wiki.archlinux.org/title/Git)을 설치하고 다운받아 준다.
+
+```shell
+# git 설치
+sudo pacman -S git
+
+# git으로 yay 가져오기
+git clone https://aur.archlinux.org/yay.git
+```
+
+이제 다운이 다 됬으므로 아래 명령어들을 입력해 설치해준다.
+
+```shell
+# yay 디렉토리 진입
+cd yay
+
+# 패키지 설치
+makepkg -risc
+```
+
+### Secure boot 설정 (optional)
+
+위의 부팅전에 secure boot 설정을 껐지만 앞으로 다시 켜서 사용하고 싶을 경우 secure boot 설정을 해주어야 한다.
+
+[Secure boot](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot) 설명 문서에 여러 방법들이 나와있는데 이중 구글에 검색해봤을때 가장 유명했던 [shim](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#shim)을 기준으로 설명하고자 한다.
+
+shim은 AUR에 업로드되어 있으므로 아래 명령으로 설치해준다. 추가로 [efibootmgr](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface#efibootmgr) 또한 필요하므로 설치해준다.
+
+```shell
+yay shim-signed
+yay -S efibootmgr
+```
+
+yay등의 AUR helper로 설치한 뒤에도 몇가지 파일들을 복사 해주어야 하는데 아래 명령어들을 입력해주면 된다.
+
+```shell
+# 우선 BOOTx64.EFI를 grubx64.efi로 이름을 바꿔준다.
+mv /boot/EFI/BOOT/BOOTx64.EFI /boot/EFI/BOOT/grubx64.efi
+
+# 두개의 파일을 복사해 준다.
+cp /usr/share/shim-signed/shimx64.efi /boot/EFI/BOOT/BOOTx64.EFI
+cp /usr/share/shim-signed/mmx64.efi /boot/EFI/BOOT/
+
+# shim으로 부팅될수 있도록 부팅 진입점을 새로 efibootmgr 명령을 사용해 생성해준다.
+efibootmgr --verbose --disk /dev/sdX --part Y --create --label "Shim" --loader /EFI/BOOT/BOOTx64.EFI
+```
+
+> efibootmgr 명령에서 `--disk /dev/sdX` 부분은 자신의 저장장치 경로에 맞게 설정해주고(파티션 번호 제외) `--part Y` 부분에서 Y대신 파티션 번호를 설정해준다.
+{: .prompt-info }
+
+이제 모든 설치가 끝났으니 재부팅해주면 된다!
+
+다만 shim은 부트 이미지들에 해쉬값을 생성해주어야 하는데 이는 재부팅 과정에서 진행할 수 있다. 
+
+재부팅을 하게되면 `MokManager`라는 것이 실행되게 되는데 여기서 `Enroll hash`를 선택해준뒤 `/boot/EFI/BOOT/grubx64.efi`파일을 선택해 해쉬를 생성해준다. 또한 `vmlinuz-linux-zen` 파일을 찾아 한번더 해쉬를 생성해주면 된다.
+
+> 이러한 해쉬 생성은 shim이나 커널이 업데이트 되어 파일이 변경되었을때 다시 해주면 된다.
+{: .prompt-info }
+
+이것으로 Secure Boot까지 기본적인 설정들은 모두 마치게 된다!!
 
 ## 추가로 참고할 자료
 
-이 이상의 설정은 이미 위에서 설정한것도 몇가지 있지만 아치위키의 [General recommendations](https://wiki.archlinux.org/title/General_recommendations) 문서를 참고하면 좋다.
+이 이상의 설정은 이미 위에서 설정한것도 몇가지 있지만 아치위키의 [General recommendations](https://wiki.archlinux.org/title/General_recommendations) 문서를 참고하면 좋다. 또한 아치 리눅스에서 사용할만한 응용프로그램에 대해서는 [List of applications](https://wiki.archlinux.org/title/List_of_applications) 문서도 참고하면 좋다.
 
-(아직 작성중....)
+아치 리눅스에대한 많은 정보는 [아치위키](https://wiki.archlinux.org)에 정말 잘 정리되어 있으니 뭔가 문제가 생기거나 하면 꼭 확인해 보는것이 좋다.
