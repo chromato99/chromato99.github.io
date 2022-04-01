@@ -602,6 +602,12 @@ MODULES=(... amdgpu ...)
 MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
 ```
 
+파일 수정이 끝난 뒤에는 initramfs를 아래 명령어로 다시 생성해 주어야 한다.
+
+```shell
+mkinitcpio -P
+```
+
 Nvidia의 경우 커널 파라미터도 설정해 주어야 하는데 `/boot/loader/entries/arch.conf`파일에서 `options`를 아래와 같이 파라미터를 추가해준다.
 
 ```
