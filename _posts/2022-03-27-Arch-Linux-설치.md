@@ -11,7 +11,7 @@ tags: [linux, arch linux, installation, boot, secure boot]
 
 ![arch_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/2880px-Arch_Linux_logo.svg.png)
 
-아치 리눅스는 리눅스 배포판 가운데 하나로 미니멀리즘과 빠른 업데이트로 유명하다.
+[아치 리눅스](https://wiki.archlinux.org/title/Arch_Linux)는 리눅스 배포판 가운데 하나로 미니멀리즘과 빠른 업데이트로 유명하다.
 
 평소 리눅스를 공부하고자 리눅스를 메인 운영체제로 사용하기 위해 노력하는데, 최근 아치 리눅스에 정착해 사용중이다.
 
@@ -613,6 +613,31 @@ Nvidia의 경우 커널 파라미터도 설정해 주어야 하는데 `/boot/loa
 ```
 options root="LABEL=arch_os" rw nvidia-drm.modeset=1
 ```
+
+또한 Nvidia의 경우 initramfs도 업데이트 해줘야 하는데 [pacman hook](https://wiki.archlinux.org/title/Pacman#Hooks)을 사용하면 이를 자동화할 수 있다.
+
+이를 위해서는 `/etc/pacman.d/hooks/nvidia.hook`경로에 파일을 만들고 아래 내용을 저장해주면 된다.
+
+```
+[Trigger]
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia-dkms
+Target=linux-zen
+# Change the linux part above and in the Exec line if a different kernel is used
+
+[Action]
+Description=Update Nvidia module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux-zen) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+```
+
+> 위 내용에서 linux-zen과 nvidia-dkms는 자신이 설치한 패키지 이름으로 설정해 줘야 한다.
+{: .prompt-info }
 
 ### 데스크탑 환경 설치
 
