@@ -296,7 +296,7 @@ swapon /dev/swap_partition
 
 우선 [Pacman Mirrorlist Generator](https://archlinux.org/mirrorlist/)에 들어가면 한국 서버들의 리스트를 확인할 수 있다.
 
-미러서버 설정은 매우 간단한데 위의 링크에서 찾은 서버 목록을 /etc/pacman.d/mirrorlist 파일에 입력해주면 된다.
+미러서버 설정은 매우 간단한데 위의 링크에서 찾은 서버 목록을 `/etc/pacman.d/mirrorlist` 파일에 입력해주면 된다.
 
 > 서버 리스트에는 Server 앞에 # 주석이 적혀있는데 주석은 지워줘야 한다!
 {: .prompt-info }
