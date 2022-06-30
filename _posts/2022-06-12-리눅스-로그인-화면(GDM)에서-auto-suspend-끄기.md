@@ -6,7 +6,7 @@ author:
 date: 2022-06-12 10:00:00 +0900
 img_path: /assets/img/posts/2022-06-12-리눅스-로그인-화면(GDM)에서-auto-suspend-끄기/
 categories: [Linux, Installation and Configuration]
-tags: [linux, arch linux, configuration, autosuspend, gdm]
+tags: [linux, configuration, autosuspend, gdm, gnome]
 ---
 
 리눅스로 세팅해둔 데스크탑을 원격 접속하기 위해 wake on lan 설정을 해두었는데 settings에서 auto suspend를 off 해도 컴퓨터가 절전모드로 들어가는 문제가 있었다.
