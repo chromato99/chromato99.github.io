@@ -31,7 +31,7 @@ GDM은 Settings창으로 설정 할 수 없기 때문에 터미널에서 명령�
 
 ```shell
 sudo -u gdm dbus-launch gsettings \
-set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+  set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 ```
 
 ## Gnome Auto Suspend 설정을 가져오기
@@ -42,9 +42,9 @@ set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 
 ```shell
 IFS=$'\n'; \
-for x in $(sudo -u username gsettings list-recursively org.gnome.settings-daemon.plugins.power); \
-do eval "sudo -u gdm dbus-launch gsettings set $x"; done; \
-unset IFS
+  for x in $(sudo -u username gsettings list-recursively org.gnome.settings-daemon.plugins.power); \
+  do eval "sudo -u gdm dbus-launch gsettings set $x"; done; \
+  unset IFS
 ```
 
 > username은 설정을 가져오고 싶은 리눅스 유저명을 입력해 주면 된다.
