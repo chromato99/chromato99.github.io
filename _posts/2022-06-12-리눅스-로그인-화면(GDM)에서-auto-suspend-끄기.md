@@ -30,7 +30,8 @@ GDM은 Settings창으로 설정 할 수 없기 때문에 터미널에서 명령�
 [아치위키](https://wiki.archlinux.org/title/GDM#GDM_auto-suspend_(GNOME_3.28)) 내용에 따르면 아래 명령을 입력해주면 Auto Suspend를 아예 꺼버릴 수 있다고 한다.
 
 ```shell
-sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+sudo -u gdm dbus-launch gsettings \
+set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 ```
 
 ## Gnome Auto Suspend 설정을 가져오기
@@ -40,7 +41,10 @@ sudo -u gdm dbus-launch gsettings set org.gnome.settings-daemon.plugins.power sl
 그럴 때에는 아래 명령을 입력해서 Gnome Settings 설정을 가져와 적용할 수 있다고 한다.
 
 ```shell
-IFS=$'\n'; for x in $(sudo -u username gsettings list-recursively org.gnome.settings-daemon.plugins.power); do eval "sudo -u gdm dbus-launch gsettings set $x"; done; unset IFS
+IFS=$'\n'; \
+for x in $(sudo -u username gsettings list-recursively org.gnome.settings-daemon.plugins.power); \
+do eval "sudo -u gdm dbus-launch gsettings set $x"; done; \
+unset IFS
 ```
 
 > username은 설정을 가져오고 싶은 리눅스 유저명을 입력해 주면 된다.
