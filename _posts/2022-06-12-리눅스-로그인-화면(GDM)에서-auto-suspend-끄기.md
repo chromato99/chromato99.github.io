@@ -1,8 +1,6 @@
 ---
 title: 리눅스 로그인 화면(GDM)에서 Auto Suspend 끄기
-author:
-  name: chromato99
-  link: https://chromato99.com/about/
+author: chromato99
 date: 2022-06-12 10:00:00 +0900
 img_path: /assets/img/posts/2022-06-12-리눅스-로그인-화면(GDM)에서-auto-suspend-끄기/
 categories: [Linux, Installation and Configuration]
