@@ -5,7 +5,7 @@ img_path: /assets/img/about/
 order: 4
 ---
 
-## Profile
+## **Profile**
 
 ![profile-image](/bgkim.jpg){: w="300" h="300" .normal}
 
@@ -15,24 +15,30 @@ order: 4
 **Github**: [https://github.com/chromato99](https://github.com/chromato99)<br>
 **Homepage(Blog)**: [https://chromato99.com](https://chromato99.com)
 
-## Introduction
+***
+
+## **Introduction**
 
 저는 웹 서비스 개발, 백엔드 아키텍처 설계 및 인프라 구축, DevOps, 분산 시스템 등의 주제에 관심이 많은 개발자입니다.
 
-여러 프로젝트와 활동을 통해 다양한 경험을 쌓고 있으며, 이를 통해 더 나은 개발자가 되고자 노력하고 있습니다. 또한 오픈소스에 관심이 많아, 앞으로 오픈소스에 기여하는 것을 목표로 하고 있습니다.
+여러 프로젝트와 활동을 통해 다양한 경험을 쌓고 있으며, 이를 통해 더 나은 개발자가 되고자 노력하고 있습니다. 또한 오픈소스에 관심이 많아, 앞으로 오픈소스 생태계에 기여하는 것을 목표로 하고 있습니다.
 
-## Education and Certificate
+***
 
-- `2018.03 ~ ` 가천대학교 소프트웨어학과 (GPA 4.05/4.5)
-- `2023.03 ~ 2023.08` 가천 카카오엔터프라이즈 SW 아카데미 3기
+## **Education and Certificate**
+
+- `2018.03 ~ `&nbsp; 가천대학교 소프트웨어학과 (GPA 4.05/4.5)
+- `2023.03 ~ 2023.08`&nbsp; 가천 카카오엔터프라이즈 SW 아카데미 2기
     - 마이크로디그리 수여
 
 - 정보처리기능사 / 2021.07.16 / 한국산업인력공단
 - 리눅스마스터 2급 / 2022.04.01 / 한국정보통신진흥협회
 
-## Experience
+***
 
-### 공개 SW 개발자 대회 - QUIC-S 프로젝트
+## **Experience**
+
+#### **공개 SW 개발자 대회 - QUIC-S 프로젝트**
 
 **진행기간**: 2023.08~2023.11<br>
 **주요내용**: QUIC 프로토콜 기반 실시간 파일 동기화 시스템 개발. 논리시계 기반 버전 추적, 충돌 감지, 히스토리 저장, 공유 등의 기능을 제공<br>
@@ -45,7 +51,7 @@ order: 4
 - quics-client (QUIC-S Client): <https://github.com/quic-s/quics-client>
 - quics-protocol (QUIC-S Protocol): <https://github.com/quic-s/quics-protocol>
 
-### 가천 카카오엔터프라이즈 SW 아카데미 (A-Form, A-Log 프로젝트)
+#### **가천 카카오엔터프라이즈 SW 아카데미 (A-Form, A-Log 프로젝트)**
 
 **진행기간**: 2023.03~2023.08<br>
 **주요내용**: 3개의 아카데미 강의를 수강하며 A-Form(GPT 기반 설문 플랫폼), A-Log(동시편집 릴리즈 노트 공유 시스템) 프로젝트 수행<br>
@@ -69,7 +75,7 @@ order: 4
 - [Rook+Ceph 노트](https://chromato99.com/posts/Rook+Ceph-%EB%85%B8%ED%8A%B8/)
 - [Argo CI/CD 노트](https://chromato99.com/posts/Argo-CI-CD-%EB%85%B8%ED%8A%B8/)
 
-### 오픈소스 컨트리뷰션 아카데미 - Yorkie
+#### **오픈소스 컨트리뷰션 아카데미 - Yorkie**
 
 **진행기간**: 2022.07~2022.11<br>
 **주요내용**: Yorkie 오픈소스 기여 활동<br>
@@ -81,7 +87,7 @@ order: 4
 - [2022 오픈소스 컨트리뷰션 아카데미 Challenges 후기](https://chromato99.com/posts/2022-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-Challenges-%ED%9B%84%EA%B8%B0/)
 - [2022 오픈소스 컨트리뷰션 아카데미 Masters 후기](https://chromato99.com/posts/2022-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-Masters-%ED%9B%84%EA%B8%B0/)
 
-### 졸업작품 - Sharpic 프로젝트
+#### **졸업작품 - Sharpic 프로젝트**
 
 **진행기간**: 2022.03~2023.06<br>
 **주요내용**: 여러 모델을 사용한 이미지 초해상화 플랫폼 개발<br>
@@ -97,21 +103,21 @@ order: 4
 - PPT: <https://docs.google.com/presentation/d/1v9Ws0SNOEN16c1WHFGfGdHuITvGVT-KQ/edit?usp=sharing&ouid=115551594729015574224&rtpof=true&sd=true>
 - Demo: <https://youtu.be/YQS8nX_QcL4>
 
-### 가천대학교, INC Lab 학부생 연구원
+#### **가천대학교, INC Lab 학부생 연구원**
 
-**진행기간**: 2022.07 ~ 2023.02
-**주요내용**: 네트워킹 관련 논문 리뷰, 아동 행동 기반 연구 보조, 기술 보고서 번역 보조
-**수행 역할**: 네트워킹 관련 논문 리뷰, 아동 행동 기반의 영상 데이터 수집 및 가공, 데이터 시각화를 위한 툴 제작, 기술 보고서 번역 보조
-**기술 스택**: Python, Network
-**결과/성과**: 논문 리뷰 경험, 연구 보조 경험
+**진행기간**: 2022.07 ~ 2023.02<br>
+**주요내용**: 네트워킹 관련 논문 리뷰, IoT 정밀측위기술 및 공간분석이론을 적용한 유아교육 공간과 유아 행동 및 발달에 대한 융합연구 보조, 기술 보고서 번역 보조<br>
+**수행 역할**: 네트워킹 관련 논문 리뷰, 아동 행동 기반의 영상 데이터 수집 및 가공, 기술 보고서 번역 보조<br>
+**기술 스택**: Python, Network<br>
+**결과/성과**: 논문 리뷰 경험, 연구 보조 경험<br>
 
 **논문 리뷰**
 - [Data Augmentation for Deep Learning-Based Radio Modulation Classification](https://docs.google.com/presentation/d/1bWD4mClvB5gskNvaBcsPJXktR0KbMRnZ/edit?usp=sharing&ouid=115551594729015574224&rtpof=true&sd=true)
 - [RF-URL: Unsupervised Representation Learning for RF Sensing](https://docs.google.com/presentation/d/1oIoXFvZiDbmxuc0ewzbO5PEQkNviO0qk/edit?usp=sharing&ouid=115551594729015574224&rtpof=true&sd=true)
 
-### HarmonyXR 프로젝트 (컴퓨터 그래픽스 강의 팀 프로젝트)
+#### **HarmonyXR 프로젝트 (컴퓨터 그래픽스 강의 팀 프로젝트)**
 
-**진행기간**: 2022.09~2022.12<br>
+**진행기간**: 2022.10~2022.11<br>
 **주요내용**: 가상현실 환경(WebXR)에서 실시간 음악 연주를 구현하는 프로젝트<br>
 **수행한 역할**: 실시간 통신 구현, 피아노 악기 구현<br>
 **기술 스택**: JavaScript, Node.js, PeerJS(WebRTC), Three.js<br>
@@ -120,7 +126,7 @@ order: 4
 **Github**
 - <https://github.com/HarmonyXR/harmonyxr>
 
-### 하눌신폭 동아리 프로그래밍 팀장
+#### **하눌신폭 동아리 - 프로그래밍 팀장**
 
 **진행기간**: 2021.03~2022.06<br>
 **주요내용**: C언어 프로그래밍 스터디, 무박2일 게임잼, [overthewire(bandit)](https://overthewire.org/wargames/bandit/) 문제 풀이<br>
