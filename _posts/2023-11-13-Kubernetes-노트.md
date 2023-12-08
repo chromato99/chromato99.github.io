@@ -31,7 +31,7 @@ A-Form(GPT 기반 설문 플랫폼) : <https://github.com/KEA-ACCELER/aform-clus
 
 ### 2023 쿠버네티스 표준 아키텍처
 
-[2023년 쿠버네티스 표준 아키텍처 : 요즘IT](https://yozm.wishket.com/magazine/detail/1998/)
+[2023년 쿠버네티스 표준 아키텍처 &#124; 요즘IT](https://yozm.wishket.com/magazine/detail/1998/)
 
 쿠버네티스용 기술 스택을 참고하기 좋은 링크
 
@@ -185,13 +185,13 @@ KUBECONFIG 환경변수를 설정하고(환경변수 설정 제대로 안되면 
 
 *NetworkManager 서비스를 사용할 경우 아래 설정을 해주어야 할 수 있다.
 
-[Troubleshooting and diagnostics : Calico Documentation](https://docs.tigera.io/calico/latest/operations/troubleshoot/troubleshooting#configure-networkmanager)
+[Troubleshooting and diagnostics &#124; Calico Documentation](https://docs.tigera.io/calico/latest/operations/troubleshoot/troubleshooting#configure-networkmanager)
 
 Calico 설치는 아래 문서를 참고하였다.
 
-[Install Calico networking and network policy for on-premises deployments : Calico Documentation](https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises#install-calico)
+[Install Calico networking and network policy for on-premises deployments &#124; Calico Documentation](https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises#install-calico)
 
-[Install using Helm : Calico Documentation](https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm)
+[Install using Helm &#124; Calico Documentation](https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm)
 
 ** 3.26버전엔 문제가 있어 3.25.1로 설치해 주었다. ** (후에 Cilium으로 교체)
 
@@ -199,7 +199,7 @@ Calico 설치는 아래 문서를 참고하였다.
 
 쿠버네티스 네트워킹에 대한 문서도 읽어볼만 하다.
 
-[About Kubernetes Networking : Calico Documentation](https://docs.tigera.io/calico/latest/about/about-k8s-networking)
+[About Kubernetes Networking &#124; Calico Documentation](https://docs.tigera.io/calico/latest/about/about-k8s-networking)
 
 ### Cilium
 
@@ -247,13 +247,13 @@ kubectl taint nodes --all [node-role.kubernetes.io/control-plane-](http://node-r
 
 #### Helm 이란?
 
-[Helm : Using Helm](https://helm.sh/docs/intro/using_helm/)
+[Helm &#124; Using Helm](https://helm.sh/docs/intro/using_helm/)
 
 Helm은 쿠버네티스를 위한 패키지 관리 도구이다. Kubernetes의 오브젝트들의 구성체인 YAML을 패키지 형태로 관리한다. Helm 패키지는 YAML 형식으로 구성되어 있으며, 이것을 chart라고 한다.
 
 #### Helm 사용법
 
-[Helm : Using Helm](https://helm.sh/docs/intro/using_helm/)
+[Helm &#124; Using Helm](https://helm.sh/docs/intro/using_helm/)
 
 # 3. Kubernetes 서비스 구축
 
@@ -402,7 +402,7 @@ Kubernetes는 여러 노드에서 돌아가기때문에 단순히 한 노드에�
 
 [Deploy a registry server](https://docs.docker.com/registry/deploying/)
 
-[registry - Official Image : Docker Hub](https://hub.docker.com/_/registry)
+[registry - Official Image &#124; Docker Hub](https://hub.docker.com/_/registry)
 
 cluster 상에 deploy하기 위해 아래와 같이 yaml 파일을 작성해 주었다.
 
