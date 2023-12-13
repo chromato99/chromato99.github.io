@@ -193,7 +193,8 @@ Calico 설치는 아래 문서를 참고하였다.
 
 [Install using Helm &#124; Calico Documentation](https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm)
 
-** 3.26버전엔 문제가 있어 3.25.1로 설치해 주었다. ** (후에 Cilium으로 교체)
+> 3.26버전엔 문제가 있어 3.25.1로 설치해 주었다. (후에 Cilium으로 교체)
+{: .prompt-info }
 
 [https://github.com/projectcalico/calico/issues/7715](https://github.com/projectcalico/calico/issues/7715)
 
@@ -221,7 +222,8 @@ Cilium CLI를 설치한후 cilium install 명령을 사용해 설치할 수 있�
 kubeadm join cluster-endpoint:6443 --token mxskr3.cgddhlfck5q1ms2f --discovery-token-ca-cert-hash sha256:44d05a799345bd79f836ecf1cc29cb5f03bf0a3fb3ae81b8025cea480a4315c0
 ```
 
-** 토큰은 기본적으로 24시간 후에 소멸하므로 그 이후에는 새로 생성해 주어야 한다
+> 토큰은 기본적으로 24시간 후에 소멸하므로 그 이후에는 새로 생성해 주어야 한다
+{: .prompt-info }
 
 ```bash
 kubeadm token create
@@ -231,7 +233,7 @@ node 상태는 kubectl get nodes로 확인할 수 있다.
 
 ![kubectl-get-nodes](/kubectl-get-nodes.png)
 
-### **Single machine에서 kubeadm을 사용하고 싶을 경우
+#### **Single machine에서 kubeadm을 사용하고 싶을 경우
 
 [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#control-plane-node-isolation)
 
@@ -255,7 +257,7 @@ Helm은 쿠버네티스를 위한 패키지 관리 도구이다. Kubernetes의 �
 
 [Helm &#124; Using Helm](https://helm.sh/docs/intro/using_helm/)
 
-# 3. Kubernetes 서비스 구축
+## 3. Kubernetes 서비스 구축
 
 ### Kubernetes NGiNX Ingress Controller 설치
 
@@ -479,6 +481,7 @@ spec:
 ```
 
 그런다음 아래 명령으로 배포해주었다.
+
 ```bash
 kubectl create -f <yaml file>
 ```
@@ -498,7 +501,8 @@ docker push localhost:30500/<image name>:<tag>
 
 이렇게 하고 deployment를 작성할때 container image를 `localhost:30500/<image name>:<tag>`로 설정해주면 된다.
 
-** 다만 public release를 위해 최종적으로는 Docker hub를 사용하였다. **
+> 다만 public release를 위해 최종적으로는 Docker hub를 사용하였다.
+{: .prompt-info }
 
 ### Kubernetes secret
 
@@ -521,7 +525,8 @@ stringData:
     password: <password>
 ```
 
-**하지만 쿠버네티스에서 secret이 저장될때는 기본적으로 암호화가 되지 않고 저장한다는 취약점이 있다고 한다. 따라서 암호화등을 고려할 필요 또한 있다.
+> 하지만 쿠버네티스에서 secret이 저장될때는 기본적으로 암호화가 되지 않고 저장한다는 취약점이 있다고 한다. 따라서 암호화등을 고려할 필요 또한 있다.
+{: .prompt-danger }
 
 [Kubernetes Secret은 정말 Secret일까?](https://togomi.tistory.com/11)
 
@@ -611,9 +616,10 @@ yaml 파일을 작성하기 위해서는 deployment, service, persistent volume 
 
 ceph storage를 위한 64gb의 스토리지를 워커노드에 추가로 연결해 주었다.
 
-배포를 위한 설정은 아래 레포에 정리하였다.
+배포를 위한 설정은 아래 레포에 정리하였다. (위 문서는 A-Log 프로젝트를 기준으로 작성하였다)
 
-<https://github.com/KEA-ACCELER/alog-cluster>
+A-Form: <https://github.com/KEA-ACCELER/aform-cluster><br>
+A-Log: <https://github.com/KEA-ACCELER/alog-cluster>
 
 ### 생각해 볼 사항
 
