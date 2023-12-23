@@ -51,6 +51,9 @@ order: 4
 - quics-client (QUIC-S Client): <https://github.com/quic-s/quics-client>
 - quics-protocol (QUIC-S Protocol): <https://github.com/quic-s/quics-protocol>
 
+**Blog Post**
+- [QUIC-S] 2023 공개 SW 개발자 대회 후기: <https://chromato99.com/posts/QUIC-S-2023-%EA%B3%B5%EA%B0%9C-SW-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8C%80%ED%9A%8C-%ED%9B%84%EA%B8%B0/>
+
 #### **가천 카카오엔터프라이즈 SW 아카데미 (A-Form, A-Log 프로젝트)**
 
 **진행기간**: 2023.03~2023.08<br>
