@@ -7,7 +7,7 @@ categories: [Linux, Installation and Configuration]
 tags: [linux, arch linux, installation, boot, secure boot]
 ---
 
-![arch_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arch_Linux_logo.svg/2880px-Arch_Linux_logo.svg.png)
+![arch_logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Archlinux-logo-standard-version.png/2880px-Archlinux-logo-standard-version.png)
 
 [아치 리눅스](https://wiki.archlinux.org/title/Arch_Linux)는 리눅스 배포판 가운데 하나로 미니멀리즘과 빠른 업데이트로 유명하다.
 
