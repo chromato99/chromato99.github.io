@@ -19,7 +19,7 @@ order: 4
 
 ## **Introduction**
 
-저는 웹 서비스 개발, 백엔드 아키텍처 설계 및 인프라 구축, DevOps, 분산 시스템 등의 주제에 관심이 많은 개발자입니다.
+저는 백엔드 아키텍처 설계 및 개발, 데이터베이스, 분산 시스템. DevOps 등의 주제에 관심이 많습니다.
 
 여러 프로젝트와 활동을 통해 다양한 경험을 쌓고 있으며, 이를 통해 더 나은 개발자가 되고자 노력하고 있습니다. 또한 오픈소스에 관심이 많아, 앞으로 오픈소스 생태계에 기여하는 것을 목표로 하고 있습니다.
 
@@ -44,8 +44,8 @@ order: 4
 
 **주요내용**<br>
 - 카카오엔터프라이즈 데이터베이스 플랫폼 팀 RDBMS 파트에서 인턴 근무<br>
-- 카카오클라우드에서의 MySQL 구축, 복제 토폴로지 경험
-- MySQL 백업 및 복구 솔루션 경험
+- 카카오클라우드에서의 MySQL 구축, 복제 토폴로지 설계 경험
+- MySQL 백업 및 복구 솔루션 구축 경험
 
 ***
 
@@ -65,13 +65,13 @@ order: 4
 - quics-protocol (QUIC-S Protocol): <https://github.com/quic-s/quics-protocol>
 
 **Blog Post**
-- [QUIC-S] 2023 공개 SW 개발자 대회 후기: <https://chromato99.com/posts/QUIC-S-2023-%EA%B3%B5%EA%B0%9C-SW-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8C%80%ED%9A%8C-%ED%9B%84%EA%B8%B0/>
+- [QUIC 기반 파일 동기화 시스템 개발 후기 (2023 공개 SW 개발자 대회)](https://chromato99.com/posts/QUIC-S-%ED%8C%8C%EC%9D%BC-%EB%8F%99%EA%B8%B0%ED%99%94-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%B0%9C-%ED%9B%84%EA%B8%B0/)
 
 #### **가천 카카오엔터프라이즈 SW 아카데미 (A-Form, A-Log 프로젝트)**
 
 **진행기간**: 2023.03~2023.08<br>
 **주요내용**: 3개의 아카데미 강의를 수강하며 A-Form(GPT 기반 설문 플랫폼), A-Log(동시편집 릴리즈 노트 공유 시스템) 프로젝트 수행<br>
-**수행한 역할**: Kubernetes기반 시스템 설계 및 구축, CI/CD 구축, 클라우드 서버 운용 담당. A-Log 프로젝트에서는 추가로 Yorkie 노드 구축 및 yorkie-js-sdk를 사용한 동시편집 구현 담당<br>
+**수행한 역할**: Kubernetes기반 시스템 설계 및 구축, Argo 프로젝트를 사용한 CI/CD 구축, 클라우드 서버 운용 담당. Rook Operator를 사용한 Ceph 클러스터 구축, A-Log 프로젝트에서는 추가로 Yorkie 노드 구축 및 yorkie-js-sdk를 사용한 동시편집 구현 담당<br>
 **기술 스택**: Docker, K8s, Argo Workflows, ArgoCD, Yorkie, React.js, Rook+Ceph, MongoDB, MySQL, ScyllaDB<br>
 **결과/성과**: 쿠버네티스를 사용한 클라우드 구축 경험, 우수 수료생 표창 수상<br>
 
@@ -135,7 +135,7 @@ order: 4
 
 **진행기간**: 2022.10~2022.11<br>
 **주요내용**: 가상현실 환경(WebXR)에서 실시간 음악 연주를 구현하는 프로젝트<br>
-**수행한 역할**: 실시간 통신 구현, 피아노 악기 구현<br>
+**수행한 역할**: WebRTC 기반 실시간 통신 구현, Three.js, WebXR 기반 상호작용 구현<br>
 **기술 스택**: JavaScript, Node.js, PeerJS(WebRTC), Three.js<br>
 **결과/성과**: 학부의날 발표작 선정 및 2등상 수상<br>
 
