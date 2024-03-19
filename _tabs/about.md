@@ -43,9 +43,11 @@ order: 4
 **기간**: 2024.01~2024.03
 
 **주요내용**<br>
-- 카카오엔터프라이즈 데이터베이스 플랫폼 팀 RDBMS 파트에서 인턴 근무<br>
-- 카카오클라우드에서의 MySQL 구축, 복제 토폴로지 설계 경험
+- 카카오엔터프라이즈 데이터베이스 플랫폼 팀 RDBMS 파트에서 인턴 근무
+- MySQL 구축, 복제 토폴로지 설계 경험
 - MySQL 백업 및 복구 솔루션 구축 경험
+- Orchestrator 기반 고가용성  토폴로지 구성
+- 서버 진단 및 레포팅 툴 제작
 
 ***
 
@@ -71,7 +73,7 @@ order: 4
 
 **진행기간**: 2023.03~2023.08<br>
 **주요내용**: 3개의 아카데미 강의를 수강하며 A-Form(GPT 기반 설문 플랫폼), A-Log(동시편집 릴리즈 노트 공유 시스템) 프로젝트 수행<br>
-**수행한 역할**: Kubernetes기반 시스템 설계 및 구축, Argo 프로젝트를 사용한 CI/CD 구축, 클라우드 서버 운용 담당. Rook Operator를 사용한 Ceph 클러스터 구축, A-Log 프로젝트에서는 추가로 Yorkie 노드 구축 및 yorkie-js-sdk를 사용한 동시편집 구현 담당<br>
+**수행한 역할**: Kubernetes 기반 시스템 설계 및 구축, Argo 프로젝트를 사용한 CI/CD 구축, 클라우드 서버 운용 담당. Rook Operator를 사용한 Ceph 클러스터 구축, A-Log 프로젝트에서는 추가로 Yorkie 노드 구축 및 yorkie-js-sdk를 사용한 동시편집 구현 담당<br>
 **기술 스택**: Docker, K8s, Argo Workflows, ArgoCD, Yorkie, React.js, Rook+Ceph, MongoDB, MySQL, ScyllaDB<br>
 **결과/성과**: 쿠버네티스를 사용한 클라우드 구축 경험, 우수 수료생 표창 수상<br>
 
