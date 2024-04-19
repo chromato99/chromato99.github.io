@@ -12,8 +12,9 @@ order: 4
 **Name**: Beomgi Kim &#124; 김범기<br>
 **Major**: Dept. of Software, Gachon Univ. &#124; 가천대학교, 소프트웨어학과<br>
 **Email**: chromato99@gmail.com<br>
-**Github**: [https://github.com/chromato99](https://github.com/chromato99)<br>
-**Homepage(Blog)**: [https://chromato99.com](https://chromato99.com)
+**Github**: <https://github.com/chromato99><br>
+**Homepage(Blog)**: <https://chromato99.com><br>
+**LinkedIn**: <https://www.linkedin.com/in/beomgi-kim/>
 
 ***
 
@@ -28,11 +29,19 @@ order: 4
 ## **Education and Certificate**
 
 - `2018.03 ~ 2024.02`&nbsp; 가천대학교 소프트웨어학과 (GPA 4.13/4.5)
-- `2023.03 ~ 2023.08`&nbsp; 가천 카카오엔터프라이즈 SW 아카데미 2기
-    - 마이크로디그리 수여
+- `2023.03 ~ 2023.08`&nbsp; [가천 카카오엔터프라이즈 SW 아카데미 2기](https://www.gachon.ac.kr/kor/1148/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29yJTJGNDgwJTJGODIyOTQlMkZhcnRjbFZpZXcuZG8lM0Y%3D)
+    - 소프트웨어 전문인재 Micro Degree 수여
 
 - 정보처리기능사 / 2021.07.16 / 한국산업인력공단
 - 리눅스마스터 2급 / 2022.04.01 / 한국정보통신진흥협회
+
+***
+
+## **Honors and Awards**
+
+- 우수 인턴 수료 증명서 / 2024.03.29 / 카카오엔터프라이즈
+- 2023 공개 SW 개발자 대회 학생부문 장려상 / 2023.12.01 / 과학기술정보통신부
+- 우수 수료생 표창 / 2023.08.31 / 가천대 SW 아카데미
 
 ***
 
@@ -49,6 +58,9 @@ order: 4
 - Orchestrator 기반 고가용성  토폴로지 구성
 - 서버 진단 및 레포팅 툴 제작
 
+**Blog Post**
+- [카카오엔터프라이즈 인턴십 회고](https://chromato99.com/posts/%EC%B9%B4%EC%B9%B4%EC%98%A4%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%ED%84%B4%EC%8B%AD-%ED%9A%8C%EA%B3%A0/)
+
 ***
 
 ## **Experience**
@@ -60,6 +72,9 @@ order: 4
 **수행한 역할**: 서버 개발. QUIC 프로토콜 기반 메시지, 파일 전송 프로토콜 모듈 개발<br>
 **기술 스택**: Go, quic-go, badger, protocal buffers, docker, cobra<br>
 **결과/성과**: 학생 부문 장려상 수상<br>
+
+**수상작 소개**
+- [2023 학생부문 / 장려상_개발자대회 조직위원장상](https://www.oss.kr/dev_competition_activities/show/3c5db5c4-640b-40de-9674-876877c43d64?page=2)
 
 **Github**
 - quics (QUIC-S Server): <https://github.com/quic-s/quics>
