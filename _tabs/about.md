@@ -29,8 +29,11 @@ order: 4
 ## **Education and Certificate**
 
 - `2018.03 ~ 2024.02`&nbsp; 가천대학교 소프트웨어학과 (GPA 4.13/4.5)
-- `2023.03 ~ 2023.08`&nbsp; [가천 카카오엔터프라이즈 SW 아카데미 2기](https://www.gachon.ac.kr/kor/1148/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29yJTJGNDgwJTJGODIyOTQlMkZhcnRjbFZpZXcuZG8lM0Y%3D)
+- `2023.03 ~ 2023.08`&nbsp; [가천대 SW 아카데미 2기](https://www.gachon.ac.kr/kor/1148/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29yJTJGNDgwJTJGODIyOTQlMkZhcnRjbFZpZXcuZG8lM0Y%3D)
     - 소프트웨어 전문인재 Micro Degree 수여
+
+- Toeic / 805점 / 2023.12.10 / ETS
+- Toeic Speaking / IM2(120점) / 2024.03.16 / ETS
 
 - 정보처리기능사 / 2021.07.16 / 한국산업인력공단
 - 리눅스마스터 2급 / 2022.04.01 / 한국정보통신진흥협회
@@ -51,12 +54,18 @@ order: 4
 
 **기간**: 2024.01~2024.03
 
-**주요내용**<br>
+**주요내용**
 - 카카오엔터프라이즈 데이터베이스 플랫폼 팀 RDBMS 파트에서 인턴 근무
+- MySQL DB 관련 인턴 과제 수행
+- Kubernetes 기반 Staging 서버 DB 클러스터 구축 참여
+
+**결과/성과**
 - MySQL 구축, 복제 토폴로지 설계 경험
 - MySQL 백업 및 복구 솔루션 구축 경험
 - Orchestrator 기반 고가용성  토폴로지 구성
-- 서버 진단 및 레포팅 툴 제작
+- MySQL 운용을 위한 진단 및 레포팅 툴 제작 경험
+- Percona XtraBackup 문서 기여
+- 우수 인턴 수료 증명서 수상
 
 **Blog Post**
 - [카카오엔터프라이즈 인턴십 회고](https://chromato99.com/posts/%EC%B9%B4%EC%B9%B4%EC%98%A4%EC%97%94%ED%84%B0%ED%94%84%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%9D%B8%ED%84%B4%EC%8B%AD-%ED%9A%8C%EA%B3%A0/)
@@ -67,11 +76,25 @@ order: 4
 
 #### **공개 SW 개발자 대회 - QUIC-S 프로젝트**
 
-**진행기간**: 2023.08~2023.12<br>
-**주요내용**: QUIC 프로토콜 기반 실시간 파일 동기화 시스템 개발. 논리시계 기반 버전 추적, 충돌 감지, 히스토리 저장, 공유 등의 기능을 제공<br>
-**수행한 역할**: 서버 개발. QUIC 프로토콜 기반 메시지, 파일 전송 프로토콜 모듈 개발<br>
-**기술 스택**: Go, quic-go, badger, protocal buffers, docker, cobra<br>
-**결과/성과**: 학생 부문 장려상 수상<br>
+**진행기간**: 2023.08~2023.12
+
+**주요내용**
+- QUIC 프로토콜 기반 실시간 파일 동기화 시스템 개발.
+- 클라이언트-서버 구조의 중앙화된 파일 동기화 시스템 개발.
+- 논리시계 기반 버전 추적, 충돌 감지, 히스토리 저장, 공유 등의 기능 구현.
+
+**수행한 역할** 
+- 파일 동기화 서버 개발. 
+- QUIC 프로토콜 기반 메시지, 파일 전송 프로토콜 모듈 개발
+
+**기술 스택**: Go, quic-go, badger, protocal buffers, docker, cobra
+
+**결과/성과**
+- goroutine기반 다중 스레드 파일 동기화 처리 구현.
+- 내장 DB(BadgerDB)를 사용한 일원화된 시스템 구현.
+- QUIC 프로토콜을 사용한 소켓 프로그래밍 경험.
+- 헥사고날 아키텍처의 Port와 Adapter 구조 도입을 통한 코드 구조 개선 경험.
+- 학생 부문 장려상 수상
 
 **수상작 소개**
 - [2023 학생부문 / 장려상_개발자대회 조직위원장상](https://www.oss.kr/dev_competition_activities/show/3c5db5c4-640b-40de-9674-876877c43d64?page=2)
@@ -86,11 +109,30 @@ order: 4
 
 #### **가천 카카오엔터프라이즈 SW 아카데미 (A-Form, A-Log 프로젝트)**
 
-**진행기간**: 2023.03~2023.08<br>
-**주요내용**: 3개의 아카데미 강의를 수강하며 A-Form(GPT 기반 설문 플랫폼), A-Log(동시편집 릴리즈 노트 공유 시스템) 프로젝트 수행<br>
-**수행한 역할**: Kubernetes 기반 시스템 설계 및 구축, Argo 프로젝트를 사용한 CI/CD 구축, 클라우드 서버 운용 담당. Rook Operator를 사용한 Ceph 클러스터 구축, A-Log 프로젝트에서는 추가로 Yorkie 노드 구축 및 yorkie-js-sdk를 사용한 동시편집 구현 담당<br>
-**기술 스택**: Docker, K8s, Argo Workflows, ArgoCD, Yorkie, React.js, Rook+Ceph, MongoDB, MySQL, ScyllaDB<br>
-**결과/성과**: 쿠버네티스를 사용한 클라우드 구축 경험, 우수 수료생 표창 수상<br>
+**진행기간**: 2023.03~2023.08
+
+**주요내용**
+- 웹개발, 시스템 아키텍처, 데이터베이스 관련 3개의 아카데미 강의 수강
+- A-Form(GPT 기반 설문 플랫폼), A-Log(동시편집 릴리즈 노트 공유 시스템) 프로젝트 수행
+
+**수행한 역할**
+- Kubernetes 기반 시스템 설계 및 구축
+- Argo 프로젝트를 사용한 CI/CD 구축, 클라우드 서버 운용 담당. 
+- Rook Operator를 사용한 Ceph 클러스터 구축
+- REST API 서버 개발
+- A-Log 프로젝트에서는 추가로 Yorkie 노드 구축 및 yorkie-js-sdk를 사용한 동시편집 구현 담당
+
+**기술 스택**: Java, Spring Boot, Docker, K8s, Argo Workflows, ArgoCD, Yorkie, React.js, Rook+Ceph, MongoDB, MySQL, ScyllaDB
+
+**결과/성과**
+- Kubernetes 기반 고가용성 클라우드 서버 구축 경험
+- Micro Service Architecture 구조 도입 경험
+- 개발 서버와 배포 서버를 분리한 CI/CD 구축
+- Java, Spring Boot 학습 및 사용 경험
+- 부하 테스트와 이를 기반으로 성능 개선
+  - DB 인덱스 도입을 통한 쿼리 성능 50배 향상
+- 팀원과 협업 경험 및 협업 프로세스 개선 경험
+- 우수 수료생 표창 수상
 
 **Project Github**
 - A-Form: <https://github.com/KEA-ACCELER/aform-cluster>
@@ -110,11 +152,23 @@ order: 4
 
 #### **오픈소스 컨트리뷰션 아카데미 - Yorkie**
 
-**진행기간**: 2022.07~2022.11<br>
-**주요내용**: Yorkie 오픈소스 기여 활동<br>
-**수행한 역할**: 리드멘티로서 최종 발표와 모임 활동 주도. yorkie retention 기능 추가, 몽키패치 패키지 교체 및 버그픽스 기여<br>
-**기술 스택**: Go, Yorkie, MongoDB, gRPC<br>
-**결과/성과**: 오픈소스 프로젝트 기여 경험, Yorkie 프로젝트에 대한 이해<br>
+**진행기간**: 2022.07~2022.10
+
+**주요내용**
+- 2022 오픈소스 컨트리뷰션 아카데미의 Yorkie 프로젝트에 멘티로 참여
+- CRDT 기반 실시간 동시편집 구현 프로젝트인 Yorkie 기여활동
+
+**수행한 역할**
+- 리드멘티로 선발되어 최종 발표와 모임 활동 주도
+- yorkie retention 기능 추가, 몽키패치 패키지 교체 및 버그픽스 기여
+
+**기술 스택**: Go, Yorkie, MongoDB, gRPC
+
+**결과/성과**
+- 오픈소스 프로젝트 기여 및 코드 리뷰 경험
+- Yorkie 프로젝트 및 분산 시스템에 대한 이해 향상
+- 작업 내용에 대한 문서 작성
+- MongoDB, gRPC 등의 새로운 기술스택 사용 경험
 
 **Blog Post**
 - [2022 오픈소스 컨트리뷰션 아카데미 Challenges 후기](https://chromato99.com/posts/2022-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A6%AC%EB%B7%B0%EC%85%98-%EC%95%84%EC%B9%B4%EB%8D%B0%EB%AF%B8-Challenges-%ED%9B%84%EA%B8%B0/)
@@ -126,7 +180,7 @@ order: 4
 **주요내용**: 여러 모델을 사용한 이미지 초해상화 플랫폼 개발<br>
 **수행한 역할**: 웹 프론트 및 서비스 API, 이미지 저장 서버 구축<br>
 **기술 스택**: Go, Gin, Docker, NGiNX, MinIO, React.js, PostgreSQL<br>
-**결과/성과**: 'GAN을 활용한 고품질 이미지 생성 플랫폼’ 논문 투고<br>
+**결과/성과**: Go를 사용한 API 서버 개발 경험. 'GAN을 활용한 고품질 이미지 생성 플랫폼' 논문 투고.
 
 **Github**
 - <https://github.com/GCU-Sharpic/sharpic>
