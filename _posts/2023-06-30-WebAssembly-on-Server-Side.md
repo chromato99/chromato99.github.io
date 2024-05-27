@@ -2,7 +2,7 @@
 title: WebAssembly on Server Side
 author: chromato99
 date: 2023-06-30 21:00:00 +0900
-img_path: /assets/img/posts/2023-06-30-WebAssembly-on-Server-Side/
+media_subpath: /assets/img/posts/2023-06-30-WebAssembly-on-Server-Side/
 categories: [Cloud Native, WASM]
 tags: [linux, wasm, cloudnative, serverless]
 ---

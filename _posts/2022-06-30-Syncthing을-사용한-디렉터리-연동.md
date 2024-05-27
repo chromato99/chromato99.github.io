@@ -2,7 +2,7 @@
 title: Syncthing을 사용한 디렉터리 연동
 author: chromato99
 date: 2022-06-30 11:00:00 +0900
-img_path: /assets/img/posts/2022-06-30-Syncthing을-사용한-디렉터리-연동/
+media_subpath: /assets/img/posts/2022-06-30-Syncthing을-사용한-디렉터리-연동/
 categories: [Linux, Installation and Configuration]
 tags: [linux, configuration, syncthing]
 ---

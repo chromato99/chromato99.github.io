@@ -2,7 +2,7 @@
 title: Kubernetes 노트
 author: chromato99
 date: 2023-11-13 23:00:00 +0900
-img_path: /assets/img/posts/2023-11-13-Kubernetes-노트/
+media_subpath: /assets/img/posts/2023-11-13-Kubernetes-노트/
 categories: [Cloud Native, K8s]
 tags: [linux, k8s, cloudnative]
 ---

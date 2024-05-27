@@ -2,7 +2,7 @@
 title: Arch Linux 설치
 author: chromato99
 date: 2022-03-27 2:00:00 +0900
-img_path: /assets/img/posts/2022-03-27-Arch-Linux-설치/
+media_subpath: /assets/img/posts/2022-03-27-Arch-Linux-설치/
 categories: [Linux, Installation and Configuration]
 tags: [linux, arch linux, installation, boot, secure boot]
 ---
