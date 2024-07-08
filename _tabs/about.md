@@ -13,8 +13,8 @@ order: 4
 **Major**: Dept. of Software, Gachon Univ. &#124; 가천대학교, 소프트웨어학과<br>
 **Email**: chromato99@gmail.com<br>
 **Github**: <https://github.com/chromato99><br>
-**Homepage(Blog)**: <https://chromato99.com><br>
-**LinkedIn**: <https://www.linkedin.com/in/beomgi-kim/>
+**LinkedIn**: <https://www.linkedin.com/in/beomgi-kim/><br>
+**Homepage(Blog)**: <https://chromato99.com>
 
 ***
 
@@ -29,7 +29,7 @@ order: 4
 ## **Education and Certificate**
 
 - `2018.03 ~ 2024.02`&nbsp; 가천대학교 소프트웨어학과 (GPA 4.13/4.5)
-- `2023.03 ~ 2023.08`&nbsp; [가천대 SW 아카데미 2기](https://www.gachon.ac.kr/kor/1148/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29yJTJGNDgwJTJGODIyOTQlMkZhcnRjbFZpZXcuZG8lM0Y%3D)
+- `2023.03 ~ 2023.08`&nbsp; 가천대 SW 아카데미 2기 ([아카데미 소개](https://www.gachon.ac.kr/kor/1148/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29yJTJGNDgwJTJGODIyOTQlMkZhcnRjbFZpZXcuZG8lM0Y%3D))
     - 소프트웨어 전문인재 Micro Degree 수여
 
 - Toeic / 805점 / 2023.12.10 / ETS
@@ -107,7 +107,7 @@ order: 4
 **Blog Post**
 - [QUIC 기반 파일 동기화 시스템 개발 후기 (2023 공개 SW 개발자 대회)](https://chromato99.com/posts/QUIC-S-%ED%8C%8C%EC%9D%BC-%EB%8F%99%EA%B8%B0%ED%99%94-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EB%B0%9C-%ED%9B%84%EA%B8%B0/)
 
-#### **가천 SW 아카데미 (A-Form, A-Log 프로젝트)**
+#### **가천대 SW 아카데미 (A-Form, A-Log 프로젝트)**
 
 **진행기간**: 2023.03~2023.08
 
