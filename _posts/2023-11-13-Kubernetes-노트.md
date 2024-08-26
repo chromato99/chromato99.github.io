@@ -77,7 +77,7 @@ Kubernetes에서 서비스는 클러스터에서 하나 이상의 포드로 실�
 
 [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-![kubernetes-service](/kubernetes-service.png)
+![kubernetes-service](/kubernetes-service.webp)
 
 ## 1. 쿠버네티스 설치
 
@@ -231,7 +231,7 @@ kubeadm token create
 
 node 상태는 kubectl get nodes로 확인할 수 있다.
 
-![kubectl-get-nodes](/kubectl-get-nodes.png)
+![kubectl-get-nodes](/kubectl-get-nodes.webp)
 
 #### **Single machine에서 kubeadm을 사용하고 싶을 경우
 
@@ -364,7 +364,7 @@ spec:
                   number: 8080
 ```
 
-![nodes-overview](/nodes-overview.png)
+![nodes-overview](/nodes-overview.webp)
 
 이렇게 구성한 노드 구조를 그림으로 나타내면 위와 같다고 할 수 있다.
 
@@ -602,9 +602,9 @@ yaml 파일을 작성하기 위해서는 deployment, service, persistent volume 
 
 위 내용을 기반으로 현재까지 구성한 구조는 아래와 같다.
 
-![nodes-final](/nodes-final.png)
+![nodes-final](/nodes-final.webp)
 
-![alog-architecture](/alog-architecture.png)
+![alog-architecture](/alog-architecture.webp)
 
 | VM 이름 | Node Name | Type | IP | Spec |
 | --- | --- | --- | --- | --- |

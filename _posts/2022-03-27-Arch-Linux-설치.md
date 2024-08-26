@@ -39,7 +39,7 @@ tags: [linux, arch linux, installation, boot, secure boot]
 
 딱히 상관은 없지만 파티션 형식은 기본값인 MBR이 아닌 GPT(좀더 최신이다)로 선택해도 된다. 다만 GPT로 선택하면 UEFI 환경에서만 부팅 가능하다.
 
-![rufus_img](/rufus_img.png){: width="50%" height="50%" }
+![rufus_img](/rufus_img.webp){: width="50%" height="50%" }
 
 ### 설치용 미디어 만들기 (Linux)
 

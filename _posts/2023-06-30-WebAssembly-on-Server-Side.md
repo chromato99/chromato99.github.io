@@ -98,7 +98,7 @@ Docker + Wasm을 사용하려면 containerd 이미지 저장소 기능을 활성
 
 따라서 기존의 Container 보다 훨씬 빠르면서도 격리된 환경을 제공할 수 있다. 
 
-![solomon-hykes](/solomon-hykes.png)
+![solomon-hykes](/solomon-hykes.webp)
 
 실제로 Docker 설립자 Solomon Hykes는 웹어셈블리의 중요성을 강조하기도 하였다.
 
@@ -138,22 +138,22 @@ WebAssembly를 서버에서 사용할때 장점을 정리하면 아래와 같다
 
 자세한 실행법은 링크에서 확인 할 수 있다. 아래는 실제 데모가 구동되는 모습이다.
 
-![demo-1](/demo-1.png)
+![demo-1](/demo-1.webp)
 
 Docker Desktop에서 Beta 활성화
 
-![demo-2](/demo-2.png)
+![demo-2](/demo-2.webp)
 
 `docker compose up` 명령을 사용했을때 서버가 동작하는 모습
 
-![demo-3](/demo-3.png)
+![demo-3](/demo-3.webp)
 
 데모 페이지
 
-![demo-4](/demo-4.png)
+![demo-4](/demo-4.webp)
 
 데이터 삽입 테스트
 
-![demo-5](/demo-5.png)
+![demo-5](/demo-5.webp)
 
 데이터 확인

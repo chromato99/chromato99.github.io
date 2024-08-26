@@ -7,7 +7,7 @@ order: 4
 
 ## **Profile**
 
-![profile-image](/bgkim.jpg){: w="300" h="300" .normal}
+![profile-image](/bgkim.webp){: w="300" h="300" .normal}
 
 **Name**: Beomgi Kim &#124; 김범기<br>
 **Major**: Dept. of Software, Gachon Univ. &#124; 가천대학교, 소프트웨어학과<br>

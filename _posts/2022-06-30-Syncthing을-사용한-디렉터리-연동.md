@@ -37,7 +37,7 @@ tags: [linux, configuration, syncthing]
 
 이를 해결하기 위해 24시간 켜 두는 개인 서버로 사용하는 라즈베리파이에도 syncthing을 설치해 사용하는 세팅을 하게 되었다. 
 
-![my-setting](/my-setting.png)
+![my-setting](/my-setting.webp)
 
 위와 같이 세팅을 해주게 되면 데스크톱과 노트북에서 파일을 수정하게 되면 24시간 켜져 있는 서버에 실시간으로 변경이 반영되므로 두 기기간의 동기화를 위해 두 기기를 동시에 켜둘 필요가 없어진다.
 
@@ -61,11 +61,11 @@ systemctl --user enable --now syncthing.service
 
 처음 브라우저로 접속하면 아래와 같은 경고를 볼 수 있다.
 
-![connection-warning](/connection-warning.png)
+![connection-warning](/connection-warning.webp)
 
 이는 https 연결을 위한 ssl 인증서가 인증이 안되었다는 경고로 인터넷에서 알 수 없는 사이트를 들어갈 때는 조심해야 하지만 지금 들어가려는 페이지는 방금 서버를 열었기 때문에 인증이 없는 게 당연하므로 무시하고 접속하면 된다.
 
-![first-setup](/first-setup.png)
+![first-setup](/first-setup.webp)
 
 처음 접속을 하면은 위와 같이 비밀번호를 설정하라는 안내가 나오는데 설정을 눌러 비밀번호를 설정하면 된다.
 
@@ -75,17 +75,17 @@ systemctl --user enable --now syncthing.service
 
 그렇다면 이제 기기간의 연동을 설정해 주어야 한다. 그러기 위해서는 우선 연동할 디렉터리(폴더)를 추가해주어야 한다.
 
-![dir-list](/dir-list.png)
+![dir-list](/dir-list.webp)
 
 처음 기본 설정으로는 위의 부분에 기본적으로 추가된 디렉터리가 있을것인데 이를 사용해주어도 되고 아니면 연동하고 싶은 디렉터리(폴더)를 직접 추가해 주어도 된다.
 
-![device-list](/device-list.png)
+![device-list](/device-list.webp)
 
 자신의 상황에 맞게 폴더를 설정했다면 연동하고 싶은 기기를 추가해야 하는데 위의 화면과 같이 기기가 추가되어야 한다. 
 
 기기 추가를 위해서는 오른쪽 아래의 '다른 기기 추가'버튼을 누르면 된다.
 
-![add-device-setup](/add-device-setup.png)
+![add-device-setup](/add-device-setup.webp)
 
 그러면 위와 같은 창이 뜨게 되는데 여기서 중요한 건 기기 식별자를 입력하는 것과 공유할 디렉터리(폴더)를 설정하는 것이다. 
 
@@ -95,23 +95,23 @@ systemctl --user enable --now syncthing.service
 
 따라서 기기 식별자를 입력해주어야 하는데 이는 아래와 같이 오른쪽 위 메뉴를 누르면 확인할 수 있다.
 
-![device-identifier](/device-identifier.png)
+![device-identifier](/device-identifier.webp)
 
 기기 식별자는 내가 연동하고자 하는 대상의 기기 식별자를 입력해야 하므로 메신저 등을 사용해 복사해 입력해주도록 하면 된다.
 
 이렇게 설정을 모두 하면 대상이 되는 기기에서 기기를 추가하고 싶다고 알림이 오는것을 확인할 수 있다.
 
-![add-device-req](/add-device-req.png)
+![add-device-req](/add-device-req.webp)
 
 위와 같은 알림이 오게되는데 알맞은 알림인지 확인하고 추가버튼을 누르면 된다.
 
-![add-new-dir](/add-new-dir.png)
+![add-new-dir](/add-new-dir.webp)
 
 기기를 추가하면 좀 있다가 위와 같이 디렉터리(폴더)의 공유 요청이 들어오게 되고 이를 추가해주면 된다.
 
 이때 추가를 누르면 나오는 설정에서 기본 설정을 따라도 되지만 디렉터리 경로나 백업 설정 등을 할 수 있다. 이는 자신이 원하는대로 설정해주면 된다.
 
-![syncing](/syncing.png)
+![syncing](/syncing.webp)
 
 설정이 끝나면 위와 같이 동기화중인 모습을 확인할 수 있다!
 
