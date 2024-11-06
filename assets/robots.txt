@@ -1,8 +1,9 @@
 ---
 permalink: /robots.txt
 # The robots rules
-#DaumWebMasterTool:16f3d4d534d30f1df2f875165bb427ca20155df6b1d72c4a827852a59ecf191a:Pd9WVtzazOCMKHPGxx6tIg==
 ---
+
+#DaumWebMasterTool:16f3d4d534d30f1df2f875165bb427ca20155df6b1d72c4a827852a59ecf191a:Pd9WVtzazOCMKHPGxx6tIg==
 
 User-agent: *
 
